@@ -10,74 +10,70 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    body{ background-color: hsl(212, 45%, 89%);}
+    body{ 
+      background-color: #D5E1EF; 
+    }
     .attribution { font-size: 11px; text-align: center; margin-top: 0.5em;}
     .attribution a { color: hsl(228, 45%, 44%); }
-    .QRCard {
-      margin: auto;
-      background: #ffffff; 
-      text-align: center;
+    .container {
       position: relative;
-      width: 200px;
-      padding: 0.5em; 
-      border-radius: 1em;}
-    .QRImage { 
-      border-radius: 1em; 
-      width: 180px; height: 180px;
-      padding: 0.5em;
+      height: 100vh;
     }
-    .goal { font-size: 15px; 
-      margin: 0% 5% 5% 5%; 
+    .QRCard {
+      max-width: fit-content;
+      max-height: fit-content;
+      margin: auto;
+
+      background: #ffffff; 
+      padding: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 288px;
+      /* padding: 0.5em;  */
+      border-radius: 1em;
+    }
+    .QRImage {
+      border-radius: 1em; 
+      width: 288px; height: 288px;
+    }
+    .captionCard {
+      text-align: center;
+      width: 288px;
+    }
+    .goal { 
+      margin: 8px;
+      font-size: 22px; 
       font-weight: 700; 
       font-family: Outfit;}
     .howto { 
-      font-size: 12px; font-weight: 400; 
-      margin: 5%;
+      margin: 24px;
+      font-size: 15px; 
+      font-weight: 400; 
     }
   
-    @media only screen and (max-width: 375px) {
-      /* body {
-        margin-top: 10em;
-      } */
-      .QRCard {
-        width: 80%;
-        height: 60%;
-        margin: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-      }
-      .QRImage { 
-      border-radius: 1em; 
-      width: 90%;
-      height: auto;
-      position: relative;
-      padding: 0.5em;
-    }
-    .goal { font-size: 1.25em; 
-      margin: 5% 5%; 
-      font-weight: bold; 
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    .howto { font-size: 1em; margin: 5% 5% ;
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
-    }
+    /* @media only screen and (max-width: 375px) {
+    } */
   </style>
 </head>
 <body>
-  <div class="QRCard">
-  <img src="images/image-qr-code.png" class="QRImage"/>
-  <p class="goal">
-    Improve your front-end skills by building projects
-  </p>
-  <p class="howto">
-    Scan the QR code to visit Frontend Mentor and take your coding skills to the next level  
-  </p>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <div class="QRCard">
+      <img src="images/image-qr-code.png" class="QRImage"/>
+      <div class="captionCard">
+        <p class="goal">
+          Improve your front-end skills by building projects
+        </p>
+        <p class="howto">
+          Scan the QR code to visit Frontend Mentor and take your coding skills to the next level  
+        </p>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
 </body>
 </html>
